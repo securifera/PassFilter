@@ -3,7 +3,7 @@ Encrypted Persistent Password Logger
 
 This repository contains code for three utilities:
 
-PassFilt - Project to generate a Windows password filter extension DLL. The DLL can be registered with the operating system by adding the name of the DLL to the "HKLM\System\CurrentControlSet\Control\Lsa\Notification Packages" registry key. The default search path for the DLL is Windows\System32 but child directories of System32 will work as well. If this password filter is added to a domain controller you will capture all password changes across the domain that are performed on the specific DC. **The LSASS process loads the extension DLL on startup and since this process is a critical Windows process, in crashes caused by the DLL will cause the system to reboot.**
+PassFilt - Project to generate a Windows password filter extension DLL. The DLL can be registered with the operating system by adding the name of the DLL to the "HKLM\System\CurrentControlSet\Control\Lsa\Notification Packages" registry key. The default search path for the DLL is Windows\System32 but child directories of System32 will work as well. If this password filter is added to a domain controller you will capture all password changes across the domain that are performed on the specific DC. **The LSASS process loads the extension DLL on startup and since this process is a critical Windows process, in crashes caused by the DLL will cause the system to reboot.** https://docs.microsoft.com/en-us/windows/desktop/secmgmt/password-filters
 
 PubPrivkeygen - Simple project to generate a public/private RSA key pair to be used with the password filter.
 
